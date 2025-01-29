@@ -1,0 +1,26 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "my-plugin/server-render-block",
+    "version": "0.1.0",
+    "title": "Server-Side Render Block",
+    "category": "widgets",
+    "icon": "admin-site",
+    "description": "A block that dynamically renders content on the server.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Latest Posts"
+        },
+        "numberOfPosts": {
+            "type": "number",
+            "default": 5
+        }
+    },
+    "supports": {
+        "html": false
+    },
+    "editorScript": "file:./index.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}
